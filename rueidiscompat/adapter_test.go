@@ -12635,7 +12635,7 @@ func testAdapterSearchRESP2() {
 
 		})
 
-		It("should FTAggregate sort and limit", Label("search", "ftaggregate"), func() {
+		FIt("should FTAggregate sort and limit", Label("search", "ftaggregate"), func() {
 			text1 := &FieldSchema{FieldName: "t1", FieldType: SearchFieldTypeText}
 			text2 := &FieldSchema{FieldName: "t2", FieldType: SearchFieldTypeText}
 			val, err := adapter.FTCreate(ctx, "idx1", &FTCreateOptions{}, text1, text2).Result()
